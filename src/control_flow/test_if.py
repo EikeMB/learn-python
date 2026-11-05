@@ -44,3 +44,20 @@ def test_if_statement_zero():
         conclusion = 'Number bigger than or equal to one'
 
     assert conclusion == 'Number equals to zero'
+
+def test_if_statement_negative():
+    """IF statement - negative number"""
+
+    number = -5
+    conclusion = ''
+
+    if number < 0:
+        conclusion = 'Number is less than zero'
+    elif number == 0:
+        conclusion = 'Number equals to zero'
+    elif number < 1:
+        conclusion = 'Number is greater than zero but less than one'
+    else:
+        conclusion = 'Number bigger than or equal to one'
+
+    assert conclusion == 'Number is less than zero'
