@@ -28,36 +28,38 @@ def test_if_statement():
     assert conclusion == 'Number bigger than or equal to one'
 
 
-def test_if_statement_zero():
-    """IF statement - zero"""
-
-    number = 0
-    conclusion = ''
-
-    if number < 0:
-        conclusion = 'Number is less than zero'
-    elif number == 0:
-        conclusion = 'Number equals to zero'
-    elif number < 1:
-        conclusion = 'Number is greater than zero but less than one'
+def test_if_multiple_elif_statement():
+    """IF statement with multiple elif branches"""
+ 
+    score = 85
+    grade = ''
+ 
+    if score >= 90:
+        grade = 'A'
+    elif score >= 80:
+        grade = 'B'
+    elif score >= 70:
+        grade = 'C'
+    elif score >= 60:
+        grade = 'D'
     else:
-        conclusion = 'Number bigger than or equal to one'
+        grade = 'F'
+ 
+    assert grade == 'B'
 
-    assert conclusion == 'Number equals to zero'
-
-def test_if_statement_negative():
-    """IF statement - negative number"""
-
-    number = -5
-    conclusion = ''
-
-    if number < 0:
-        conclusion = 'Number is less than zero'
-    elif number == 0:
-        conclusion = 'Number equals to zero'
-    elif number < 1:
-        conclusion = 'Number is greater than zero but less than one'
+def test_nested_if_statement():
+    """Nested IF statement"""
+ 
+    age = 30
+    is_student = True
+    price = 0
+ 
+    if age >= 18:
+        if is_student:
+            price = 8
+        else:
+            price = 12
     else:
-        conclusion = 'Number bigger than or equal to one'
-
-    assert conclusion == 'Number is less than zero'
+        price = 5
+ 
+    assert price == 8
